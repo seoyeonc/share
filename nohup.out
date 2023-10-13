@@ -1,0 +1,70 @@
+[I 2023-10-13 09:59:00.381 ServerApp] Package jupyterlab took 0.0000s to import
+[I 2023-10-13 09:59:00.389 ServerApp] Package jupyter_lsp took 0.0074s to import
+[W 2023-10-13 09:59:00.389 ServerApp] A `_jupyter_server_extension_points` function was not found in jupyter_lsp. Instead, a `_jupyter_server_extension_paths` function was found and will be used for now. This function name will be deprecated in future releases of Jupyter Server.
+[I 2023-10-13 09:59:00.392 ServerApp] Package jupyter_server_terminals took 0.0032s to import
+[I 2023-10-13 09:59:00.392 ServerApp] Package notebook took 0.0000s to import
+[I 2023-10-13 09:59:00.394 ServerApp] Package notebook_shim took 0.0000s to import
+[W 2023-10-13 09:59:00.394 ServerApp] A `_jupyter_server_extension_points` function was not found in notebook_shim. Instead, a `_jupyter_server_extension_paths` function was found and will be used for now. This function name will be deprecated in future releases of Jupyter Server.
+[I 2023-10-13 09:59:00.394 ServerApp] jupyter_lsp | extension was successfully linked.
+[I 2023-10-13 09:59:00.397 ServerApp] jupyter_server_terminals | extension was successfully linked.
+[I 2023-10-13 09:59:00.401 ServerApp] jupyterlab | extension was successfully linked.
+[I 2023-10-13 09:59:00.405 ServerApp] notebook | extension was successfully linked.
+[I 2023-10-13 09:59:00.553 ServerApp] notebook_shim | extension was successfully linked.
+[I 2023-10-13 09:59:00.568 ServerApp] notebook_shim | extension was successfully loaded.
+[I 2023-10-13 09:59:00.570 ServerApp] jupyter_lsp | extension was successfully loaded.
+[I 2023-10-13 09:59:00.570 ServerApp] jupyter_server_terminals | extension was successfully loaded.
+[I 2023-10-13 09:59:00.571 LabApp] JupyterLab extension loaded from /root/anaconda3/envs/r/lib/python3.12/site-packages/jupyterlab
+[I 2023-10-13 09:59:00.571 LabApp] JupyterLab application directory is /root/anaconda3/envs/r/share/jupyter/lab
+[I 2023-10-13 09:59:00.572 LabApp] Extension Manager is 'pypi'.
+[I 2023-10-13 09:59:00.574 ServerApp] jupyterlab | extension was successfully loaded.
+[I 2023-10-13 09:59:00.575 ServerApp] notebook | extension was successfully loaded.
+[I 2023-10-13 09:59:00.576 ServerApp] Serving notebooks from local directory: /root/share
+[I 2023-10-13 09:59:00.576 ServerApp] Jupyter Server 2.7.3 is running at:
+[I 2023-10-13 09:59:00.576 ServerApp] http://eaa0a3ea2fe9:1212/lab
+[I 2023-10-13 09:59:00.576 ServerApp]     http://127.0.0.1:1212/lab
+[I 2023-10-13 09:59:00.576 ServerApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+During startup - Warning messages:
+1: Setting LC_COLLATE failed, using "C" 
+2: Setting LC_TIME failed, using "C" 
+3: Setting LC_MESSAGES failed, using "C" 
+4: Setting LC_MONETARY failed, using "C" 
+5: Setting LC_PAPER failed, using "C" 
+6: Setting LC_MEASUREMENT failed, using "C" 
+[I 2023-10-13 09:59:00.782 ServerApp] Skipped non-installed server(s): bash-language-server, dockerfile-language-server-nodejs, javascript-typescript-langserver, jedi-language-server, julia-language-server, pyright, python-language-server, python-lsp-server, r-languageserver, sql-language-server, texlab, typescript-language-server, unified-language-server, vscode-css-languageserver-bin, vscode-html-languageserver-bin, vscode-json-languageserver-bin, yaml-language-server
+[E 2023-10-13 09:59:19.981 ServerApp] Uncaught exception in write_error
+    Traceback (most recent call last):
+      File "/root/anaconda3/envs/r/lib/python3.12/site-packages/tornado/web.py", line 1294, in send_error
+        self.write_error(status_code, **kwargs)
+      File "/root/anaconda3/envs/r/lib/python3.12/site-packages/jupyter_server/base/handlers.py", line 711, in write_error
+        html = self.render_template("%s.html" % status_code, **ns)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/root/anaconda3/envs/r/lib/python3.12/site-packages/jupyter_server/base/handlers.py", line 639, in render_template
+        return template.render(**ns)
+               ^^^^^^^^^^^^^^^^^^^^^
+      File "/root/anaconda3/envs/r/lib/python3.12/site-packages/jinja2/environment.py", line 1301, in render
+        self.environment.handle_exception()
+      File "/root/anaconda3/envs/r/lib/python3.12/site-packages/jinja2/environment.py", line 936, in handle_exception
+        raise rewrite_traceback_stack(source=source)
+      File "/root/anaconda3/envs/r/lib/python3.12/site-packages/jupyter_server/templates/404.html", line 1, in top-level template code
+        {% extends "error.html" %}
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/root/anaconda3/envs/r/lib/python3.12/site-packages/jupyter_server/templates/error.html", line 1, in top-level template code
+        {% extends "page.html" %}
+      File "/root/anaconda3/envs/r/lib/python3.12/site-packages/jupyter_server/templates/page.html", line 9, in top-level template code
+        {% block favicon %}<link id="favicon" rel="shortcut icon" type="image/x-icon" href="{{ static_url("favicon.ico") }}">
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/root/anaconda3/envs/r/lib/python3.12/site-packages/jupyter_server/templates/page.html", line 9, in block 'favicon'
+        {% block favicon %}<link id="favicon" rel="shortcut icon" type="image/x-icon" href="{{ static_url("favicon.ico") }}">
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/root/anaconda3/envs/r/lib/python3.12/site-packages/jupyter_server/extension/handler.py", line 107, in static_url
+        raise Exception(msg) from None
+    Exception: This extension doesn't have any static paths listed. Check that the extension's `static_paths` trait is set.
+[W 2023-10-13 09:59:19.982 TerminalsExtensionApp] 404 GET /terminals/websocket/1 (9989eb16b64b4ec7a3c353f2f32fbe94@210.117.173.180) 13.61ms referer=None
+0.00s - Debugger warning: It seems that frozen modules are being used, which may
+0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+0.00s - to python to disable frozen modules.
+0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+[W 2023-10-13 09:59:27.601 LabApp] Could not determine jupyterlab build status without nodejs
+[W 2023-10-13 09:59:43.634 LabApp] Could not determine jupyterlab build status without nodejs
+[C 2023-10-13 10:01:56.032 ServerApp] received signal 15, stopping
+[I 2023-10-13 10:01:56.033 ServerApp] Shutting down 5 extensions
